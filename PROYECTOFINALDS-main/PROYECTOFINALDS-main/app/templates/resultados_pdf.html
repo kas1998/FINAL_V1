@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del Diagnóstico</title>
+</head>
+<body>
+    <h1>Resultados del Diagnóstico</h1>
+    {% for etiqueta, diagnostico in diagnosticos %}
+    <div>
+        <img src="{{ url_for('static', filename='img/' + etiqueta + '.png') }}" alt="{{ etiqueta }}">
+       
+        <h2>{{ etiqueta }}</h2>
+        <p>{{ diagnostico }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
